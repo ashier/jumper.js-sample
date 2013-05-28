@@ -1,7 +1,6 @@
-
-/*
-* Configuration
-*/
+// ========================================
+// CONFIGURATION
+// ========================================
 
 (function() {
 
@@ -33,12 +32,12 @@
             // ========================================
 
             DATABASES: {
-                'default' : {
-                    'NAME': 'nodeblog',     // MongoDB document name
-                    'HOST': 'localhost',    // MongoDB hostname
-                    'PORT': '27017',        // Default 27017
-                    'USER': '',             // MongoDB username
-                    'PASSWORD': ''          // MondoDB password
+                'default': {
+                    'NAME': 'nodeblog', // MongoDB document name
+                    'HOST': 'localhost', // MongoDB hostname
+                    'PORT': '27017', // Default 27017
+                    'USER': '', // MongoDB username
+                    'PASSWORD': '' // MondoDB password
                 }
             },
 
@@ -62,15 +61,15 @@
             // ========================================
 
             MIDDLEWARES: [
-                // {name:'view options', value:{layout: false}} ,
-                // {name:'view engine', value:'html'},
-                {name:'express:bodyParser'},
-                {name:'express:methodOverride'},
-                {name:'express:router'},
-                {name:'express:cookieParser', params:['some secret key']},
-                {name:'express.static:/static,' + path.join(__dirname, '..', 'public')},
-                {name:'express.static:,' + path.join(__dirname, '..', 'views')},
-                {name:'express:logger'}
+                {name: 'express:logger', param:'dev'},
+                {name: 'view options', value: {layout: false}},
+                {name: 'view engine', value: 'html'},
+                {name: 'express:bodyParser'},
+                {name: 'express:methodOverride'},
+                {name: 'express:router'},
+                {name: 'express:cookieParser', param:'some secret key'},
+                {name: 'express.static:/static', value: path.join(__dirname, '..', 'public')},
+                {name: 'express.static', value: path.join(__dirname, '..', 'views')}
             ]
         };
 
