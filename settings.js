@@ -16,7 +16,7 @@
             // *** might be removed
             // ========================================
 
-            PROJECT_DIR: path.join(__dirname, '..'),
+            PROJECT_DIR: path.join(__dirname),
 
             // ========================================
             // JUMPER.DATABASES

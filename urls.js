@@ -11,7 +11,8 @@
             URL_PATTERNS: [
                 // Uncomment the next line to enable the admin:
                 // {route: '/admin', view:'jumper.admin.urls'}
-                {route: '/', views: 'home.views.index'}
+                {route: '/', views: 'home.views.index'},
+                {route: '/login', views: 'home.views.login'}
             ]
         };
     }();

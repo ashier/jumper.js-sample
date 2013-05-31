@@ -1,3 +1,7 @@
 module.exports.index = function(req, res) {
-    console.log("home index page");
+    res.send('hello world');
+};
+
+module.exports.login = function(req, res) {
+    res.send('this is the login page...');
 };
