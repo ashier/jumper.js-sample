@@ -1,7 +1,9 @@
+var path = require('path');
+
 module.exports.index = function(req, res) {
-    res.send('hello world');
+    res.render(path.join(__dirname, '..', '/templates/home/index.jade'));
 };
 
 module.exports.login = function(req, res) {
-    res.send('this is the login page...');
+    res.send('login page');
 };

@@ -67,6 +67,7 @@
                         app.use(express.methodOverride());
                         app.use(app.router);
                         app.use('/static', express.static(path.join(__dirname, 'static')));
+                        app.use('/templates', express.static(path.join(__dirname, 'templates')));
                     }
                 },
 
