@@ -1,4 +1,4 @@
 Jumper Example
 --------------
 
-'node manage.js runserver'
+`node manage.js runserver`
