@@ -24,9 +24,10 @@
 
             DATABASES: {
                 'default': {
-                    'NAME': '',             // MongoDB document name
-                    'HOST': '',             // MongoDB hostname
-                    'PORT': '',             // MongoDB port default = 27017
+                    'DATABASE': 'mongoose', // mongoose
+                    'NAME': 'nodeblog',             // MongoDB document name
+                    'HOST': 'localhost',             // MongoDB hostname
+                    'PORT': '27017',             // MongoDB port default = 27017
                     'USER': '',             // MongoDB username
                     'PASSWORD': ''          // MondoDB password
                 }

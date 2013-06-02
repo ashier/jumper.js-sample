@@ -10,5 +10,6 @@
   "author": "Ashier de Leon",
   "license": "Apache License Version 2",
   "dependencies": {
+    "mongoose": "*"
   }
 }

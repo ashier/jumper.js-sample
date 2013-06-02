@@ -1,6 +1,5 @@
-var mongoose = require('mogoose');
-var Post = function() {
-
+var Post = function () {
 };
 
-module.exports.Post = Post;
+Post.prototype = Object.create(require('../../jumper/').db.Model);
+module.exports.Post = new Post();
