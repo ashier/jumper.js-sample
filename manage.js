@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-require('../jumper').program(
+require('jumper.js').program(
     {
         settings: require('./settings'),
         urls: require('./urls')

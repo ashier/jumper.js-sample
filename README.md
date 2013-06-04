@@ -1,4 +1,4 @@
-Jumper Example   [![Build Status](https://travis-ci.org/ashier/jumper-sample.png)](https://travis-ci.org/ashier/jumper-sample)
+Jumper Example   [![Build Status](https://travis-ci.org/ashier/jumper.js-sample.png)](https://travis-ci.org/ashier/jumper.js-sample)
 --------------
 
 `node manage.js runserver`
