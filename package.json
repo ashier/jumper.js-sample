@@ -1,8 +1,8 @@
 {
-  "name": "node-project-sample",
+  "name": "jumper.js-sample",
   "version": "0.1.0",
-  "description": "A sample project that consumes node-admin",
-  "main": "app.js",
+  "description": "A sample project that consumes jumper.js",
+  "main": "manage.js",
   "scripts": {
     "test": "node test"
   },

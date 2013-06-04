@@ -1,7 +1,20 @@
-var path = require('path');
-var Post = require('./models').Post;
+var path = require('path'),
+    db = require('jumper.js').db,
+    Post = require('./models').Post;
 
-console.log("Post : ", Post.description);
+
+// ========================================
+// Listen to db's event 'connected'
+// ========================================
+
+db.connection.on('connected', function(err) {
+    if (err) throw err;
+    // DB Connected
+    console.log("Post : ", Post.description);
+});
+
+
+// ========================================
 
 module.exports.index = function(req, res) {
     res.render(path.join(__dirname, '..', '/templates/home/index.jade'));
