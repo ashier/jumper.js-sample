@@ -3,18 +3,13 @@ var path = require('path'),
     Post = require('./models').Post;
 
 
-// ========================================
 // Listen to db's event 'connected'
-// ========================================
-
 db.connection.on('connected', function(err) {
     if (err) throw err;
     // DB Connected
     console.log("Post : ", Post.description);
 });
 
-
-// ========================================
 
 module.exports.index = function(req, res) {
     res.render(path.join(__dirname, '..', '/templates/home/index.jade'));
