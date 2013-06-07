@@ -5,5 +5,5 @@ var Post = function () {
 
 };
 
-Post.prototype = Object.create(db.Model);
+Post.prototype = Object.create(db.models.Model);
 module.exports.Post = new Post();
