@@ -1,3 +1,9 @@
+/*
+ * Jumper
+ * Handle your views here...
+ * -> views
+ */
+
 var Post = require('./models').Post;
 
 module.exports.index = function(req, res) {
@@ -8,5 +14,4 @@ module.exports.login = function(req, res) {
     res.send('login page');
 };
 
-// var post = Post.create({title:'My Title'});
-// Post.pre.save(post);
+Post.save({title:'My Title'});

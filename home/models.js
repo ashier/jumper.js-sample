@@ -1,17 +1,23 @@
+/*
+ * Jumper
+ * Handle your models here...
+ * -> models
+ */
+
 var Model = require('jumper.js').Model,
     utils = require('jumper.js').utils;
 
 
-var User = {
+var User = Model.extend({
 
     attributes: {
         first_name: Model.STRING,
         last_name: Model.STRING
     }
 
-};
+});
 
-var Post = {
+var Post = Model.extend({
 
     attributes: {
         author: User,
@@ -25,14 +31,12 @@ var Post = {
 
     pre: {
         'save': function(err, model) {
-            // handle error ok ?
             console.log('calling pre save', model);
             model.slug = utils.slugify(model.title);
         }
     }
 
-};
+});
 
-// console.log('> ', utils.slugify('ashier de leon'));
-
+module.exports.User = User;
 module.exports.Post = Post;
