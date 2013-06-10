@@ -1,18 +1,7 @@
-doctype 5
-html(lang="en")
+!!! 5
+html
   head
-    title= pageTitle
-    script(type='text/javascript')
-      if (foo) {
-         bar()
-      }
+    title Jumper Web Framework
   body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        | Jade is a terse and simple templating language with a
-        | strong focus on performance and powerful features.
+    h1 Congratulations!
+    p #{message}

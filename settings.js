@@ -1,85 +1,64 @@
-// ========================================
-// CONFIGURATION
-// ========================================
+var path = require('path');
 
-(function() {
+module.exports = {
 
-    'use strict';
 
-    var path = require('path');
+    databases: {
+        'DATABASE': 'mongoose', // mongoose
+        'NAME': 'nodeblog', // MongoDB document name
+        'HOST': 'localhost', // MongoDB hostname
+        'PORT': '27017', // MongoDB port default = 27017
+        'USER': '', // MongoDB username
+        'PASSWORD': '' // MondoDB password
+    },
 
-    module.exports = function() {
+    // jumper.js SECRET_KEY
 
-        return {
+    secretKey: 'my super secret key',
 
-            // ========================================
-            // JUMPER.DATABASES
-            // ========================================
+    /*
+     *
+     * jumper.js iterates on the installedApps
+     * list to check which are the enabled apps
+     * within your project.
+     *
+     */
 
-            DATABASES: {
-                'default': {
-                    'DATABASE': 'mongoose', // mongoose
-                    'NAME': 'nodeblog',             // MongoDB document name
-                    'HOST': 'localhost',             // MongoDB hostname
-                    'PORT': '27017',             // MongoDB port default = 27017
-                    'USER': '',             // MongoDB username
-                    'PASSWORD': ''          // MondoDB password
-                }
-            },
+    installedApps: [
+        // Uncomment the next line to enable the admin:
+        // 'jumper.js/admin',
+        'home'
+    ],
 
-            // ========================================
-            // JUMPER.SECRET_KEY
-            // ========================================
+    /*
+     * jumper.js.MIDDLEWARES
+     *
+     * Uses the configuration based on the value of
+     * process.env.NODE_ENV.
+     *
+     * If null, it will default to 'development'
+     *
+     */
 
-            SECRET_KEY:'',
+    middlewares: {
 
-            // ========================================
-            // JUMPER.INSTALLED_APPS
-            //
-            // Jumper iterates on the INSTALLED_APPS
-            // list to check which are the enabled apps
-            // within your project.
-            // ========================================
-
-            INSTALLED_APPS: [
-                // Uncomment the next line to enable the admin:
-                // 'jumper/admin',
-                'home'
-            ],
-
-            // ========================================
-            // JUMPER.MIDDLEWARES
-            //
-            // Uses the configuration based on the value of
-            // process.env.NODE_ENV.
-            //
-            // If null, it will default to 'development'
-            //
-            // ========================================
-
-            MIDDLEWARES: {
-
-                development: {configure:
-                    function(app, express) {
-                        app.set('view engine', 'jade');
-                        app.use(express.favicon());
-                        app.use(express.logger('dev'));
-                        app.use(express.bodyParser());
-                        app.use(express.methodOverride());
-                        app.use(app.router);
-                        app.use('/static', express.static(path.join(__dirname, 'static')));
-                        app.use('/templates', express.static(path.join(__dirname, 'templates')));
-                    }
-                },
-
-                production: {configure:
-                    function(app, express) {
-
-                    }
-                }
+        development: {
+            configure: function(app, express) {
+                app.set('view engine', 'jade');
+                app.use(express.favicon());
+                app.use(express.logger('dev'));
+                app.use(express.bodyParser());
+                app.use(express.methodOverride());
+                app.use(app.router);
+                app.use('/static', express.static(path.join(__dirname, 'static')));
+                app.use('/templates', express.static(path.join(__dirname, 'templates')));
             }
+        },
 
-        };
+        production: {
+            configure: function(app, express) {
+            }
+        }
+    }
 
-    }();
-}());
+};

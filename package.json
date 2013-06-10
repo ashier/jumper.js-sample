@@ -11,6 +11,7 @@
   "license": "Apache License Version 2",
   "dependencies": {
     "jumper.js": "*",
+    "sails": "0.8.91",
     "mongoose": "*"
   }
 }

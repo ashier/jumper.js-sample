@@ -1,9 +1,13 @@
-var Jumper = require('jumper.js'),
-    db = Jumper.db;
+var Model = require('jumper.js').Model;
 
-var Post = function () {
+var Post = {
+
+    attributes: {
+
+    }
 
 };
 
-Post.prototype = Object.create(db.models.Model);
-module.exports.Post = new Post();
+console.log(Model);
+
+module.exports.Post = Post;
