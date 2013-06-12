@@ -26,7 +26,7 @@ module.exports = {
 
     installedApps: [
         // Uncomment the next line to enable the admin:
-        // 'jumper.js/admin',
+        'jumper.js-admin',
         'home'
     ],
 

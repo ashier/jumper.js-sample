@@ -1,17 +1,29 @@
 {
   "name": "jumper.js-sample",
   "version": "0.1.0",
-  "description": "A sample project that consumes jumper.js",
+  "description": "Jumper Example   [![Build Status](https://travis-ci.org/ashier/jumper.js-sample.png)](https://travis-ci.org/ashier/jumper.js-sample) --------------",
   "main": "manage.js",
-  "scripts": {
-    "test": "node test"
+  "directories": {
+    "test": "test"
   },
-  "repository": "",
-  "author": "Ashier de Leon",
-  "license": "Apache License Version 2",
   "dependencies": {
-    "jumper.js": "*",
-    "sails": "0.8.91",
-    "mongoose": "*"
+    "mongoose": "~3.6.11"
+  },
+  "devDependencies": {
+    "nodemon": "~0.7.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashier/jumper.js-sample.git"
+  },
+  "author": "Ashier de Leon",
+  "license": "Apache License 2.0",
+  "readmeFilename": "README.md",
+  "gitHead": "9a65a171ffd0005d6a99d3d1b4ed8a6faa6804f9",
+  "bugs": {
+    "url": "https://github.com/ashier/jumper.js-sample/issues"
   }
 }

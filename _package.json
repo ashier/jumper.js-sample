@@ -1,0 +1,18 @@
+{
+  "name": "jumper.js-sample",
+  "version": "0.1.0",
+  "description": "A sample project that consumes jumper.js",
+  "main": "./manage.js runserver",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": "https://github.com/ashier/jumper.js-sample.git",
+  "author": "Ashier de Leon",
+  "license": "Apache License Version 2",
+  "dependencies": {
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}
