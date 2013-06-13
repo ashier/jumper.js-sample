@@ -4,12 +4,8 @@
  * -> models
  */
 
-// var Model = require('jumper.js').Model,
-//     utils = require('jumper.js').utils;
-
-var Model = require('../../jumper.js/lib').Model,
-    utils = require('../../jumper.js/lib').utils;
-
+var Model = require('jumper.js').Model,
+    utils = require('jumper.js').utils;
 
 var User = Model.extend({
 

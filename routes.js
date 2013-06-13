@@ -11,7 +11,6 @@ module.exports = {
          * "jumper.js-admin" module is a pre-requisite
          * and must be installed.
          */
-
         'get /admin': {include:'jumper.js-admin/routes'},
 
         /* Example resource mapping...
